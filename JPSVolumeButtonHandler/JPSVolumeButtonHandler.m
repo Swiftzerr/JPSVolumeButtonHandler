@@ -10,7 +10,7 @@
 #import <MediaPlayer/MediaPlayer.h>
 
 // Comment/uncomment out NSLog to enable/disable logging
-#define JPSLog(fmt, ...) NSLog(fmt, __VA_ARGS__)
+#define JPSLog(fmt, ...) //NSLog(fmt, __VA_ARGS__)
 
 #define volumeStep 0.06250f
 
