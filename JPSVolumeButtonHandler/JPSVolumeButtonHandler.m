@@ -23,7 +23,6 @@ static CGFloat minVolume                    = 0.00001f + volumeStep;
 
 @property (nonatomic, assign) CGFloat          realVolume;
 @property (nonatomic, assign) CGFloat          initialVolume;
-@property (nonatomic, strong) AVAudioSession * session;
 @property (nonatomic, strong) MPVolumeView   * volumeView;
 @property (nonatomic, assign) BOOL             appIsActive;
 @property (nonatomic, assign) BOOL             isStarted;
