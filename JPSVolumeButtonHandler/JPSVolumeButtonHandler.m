@@ -264,8 +264,10 @@ static CGFloat minVolume                    = 0.00001f + volumeStep;
 - (void)setSystemVolume:(CGFloat)volume {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
-    [[MPMusicPlayerController applicationMusicPlayer] setVolume:(float)volume];
-    JPSLog(@"Changed volume to %f (actual: %f)", volume, self.session.outputVolume);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[MPMusicPlayerController applicationMusicPlayer] setVolume:(float)volume];
+        JPSLog(@"Changed volume to %f (actual: %f)", volume, self.session.outputVolume);
+    });
 #pragma clang diagnostic pop
 }
 
